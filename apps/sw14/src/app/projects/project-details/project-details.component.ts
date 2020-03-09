@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+
 import { Project } from '@bb/core-data';
 
 @Component({
@@ -12,13 +13,13 @@ export class ProjectDetailsComponent implements OnInit {
 
   @Input() formGroup: FormGroup;
   @Input() set project(value: Project) {
-    this.selectedProject = Object.assign({}, value)
+    this.selectedProject = Object.assign({}, value);
   }
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
 
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
